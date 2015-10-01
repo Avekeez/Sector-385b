@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{11042E74-77AE-5384-657C-314CC704E87C}</ProjectGuid>
+	<ProjectGuid>{53D30DF2-CF5C-EA27-9572-9746A2D16911}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -67,10 +67,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/SJS/Documents/GitHub/Sector 385b/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/SJS/Documents/GitHub/Sector-385b/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/SJS/Documents/GitHub/Sector 385b/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/SJS/Documents/GitHub/Sector-385b/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
