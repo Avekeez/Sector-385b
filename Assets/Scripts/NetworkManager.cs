@@ -1,29 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NetworkManager : MonoBehaviour {
-
-    private const string typeName = "name";
-    private const string gameName = "room";
-
-    private void StartServer () {
-        Network.InitializeServer (4, 25000, !Network.HavePublicAddress ());
-        MasterServer.RegisterHost (typeName, gameName);
-    }
-
-    void OnServerInitialized () {
-        print ("Server Initialized...");
+public class NetworkManager : Photon.PunBehaviour {
+    void Start () {
+        PhotonNetwork.ConnectUsingSettings ("0");
+        PhotonNetwork.logLevel = PhotonLogLevel.Full;
     }
 
     void OnGUI () {
-        if (!Network.isClient && ! Network.isServer) {
-            if (GUI.Button (new Rect (100, 100, 250, 100), "Start Server")) {
-                StartServer ();
-            }
-        }
+        GUILayout.Label (PhotonNetwork.connectionStateDetailed.ToString ());
     }
-	
-	void Update () {
-	
-	}
+
+    public override void OnJoinedLobby () {
+        PhotonNetwork.JoinRandomRoom ();
+    }
+
+    void OnPhotonRandomJoinFailed () {
+        print ("o fuk");
+        PhotonNetwork.CreateRoom (null);
+    }
+
+    public override void OnJoinedRoom () {
+        GameObject cube = PhotonNetwork.Instantiate ("Cube", Vector3.zero, Quaternion.identity, 0);
+    }
 }
